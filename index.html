@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>e-Certificate Verification</title>
+  <style>
+    body {
+      font-family: Tahoma, Arial, sans-serif;
+      margin: 0;
+      background: #ffffff;
+      color: #000000;
+      font-size: 13px;
+
+      /* Sticky footer setup */
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .content {
+      flex: 1; /* pushes footer down */
+    }
+
+    /* Top Info Bar */
+    .top-bar {
+      background: #ffffff;
+      text-align: right;
+      padding: 3px 15px;
+      font-size: 12px;
+      border-bottom: 1px solid #ccc;
+      white-space: nowrap;
+    }
+    .top-bar a {
+      color: #003399;
+      margin-left: 12px;
+      text-decoration: none;
+    }
+    .top-bar a:hover {
+      text-decoration: underline;
+    }
+
+    /* Header */
+    .header {
+      background: #ffffff;
+      padding: 6px 20px;
+      display: flex;
+      align-items: center;
+      border-bottom: 2px solid #3366cc;
+    }
+    .header img {
+      height: 50px;
+      margin-right: 10px;
+    }
+    .header h1 {
+      font-size: 20px;
+      margin: 0;
+      font-weight: bold;
+      color: #003399;
+      font-family: "Times New Roman", Times, serif; /* Changed */
+    }
+
+    /* Navbar */
+    .navbar {
+      background: linear-gradient(to bottom, #5da6f5 0%, #9cccf6 100%); /* dark → light */
+      display: flex;
+      padding: 0;
+      border-top: 1px solid #3366cc;
+      border-bottom: 1px solid #082950;
+      width: 100%;
+    }
+    .navbar a {
+      color: black;
+      text-decoration: none;
+      padding: 8px 16px;
+      font-weight: bold;
+      font-size: 12px;
+      border-right: 1px solid #3366cc;
+    }
+    .navbar a:last-child {
+      border-right: none;
+    }
+    .navbar a:hover {
+      background: #3366cc;
+      color: white;
+    }
+
+    /* Page Title */
+    .page-title {
+      margin: 20px;
+      font-size: 18px;
+      color: #003399;
+      font-weight: bold;
+      border-bottom: 2px solid #003399;
+      padding-bottom: 5px;
+    }
+
+    /* Content Box */
+    .box {
+      border: 2px solid #3366cc;
+      margin: 20px;
+      padding: 0;
+      background: #ffffff;
+      border-radius: 3px;
+      box-shadow: inset 0 0 0 1px #99c2f0; /* inner light border */
+    }
+    .box h2 {
+      margin: 0;
+      font-size: 14px;
+      font-weight: bold;
+      background: linear-gradient(to bottom, #5da6f5 0%, #9cccf6 100%); /* dark → light */
+      color: #000000;
+      padding: 6px 10px;
+      border-bottom: 2px solid #3a83d1;
+    }
+    .box-content {
+      padding: 12px;
+    }
+
+    /* Forms */
+    label {
+      font-weight: bold;
+      font-size: 13px;
+    }
+    input[type="text"] {
+      padding: 4px;
+      width: 220px;
+      margin: 5px 10px 5px 0;
+      border: 1px solid #999;
+      font-size: 13px;
+    }
+    select {
+      padding: 4px;
+      margin-right: 10px;
+      border: 1px solid #999;
+      font-size: 13px;
+    }
+
+    /* Buttons */
+    button {
+      padding: 4px 14px;
+      background: linear-gradient(to bottom, #5da6f5 0%, #9cccf6 100%); /* dark → light */
+      color: black;
+      border: 1px solid #3a83d1;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #3366cc;
+      color: white;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 5px;
+      font-size: 13px;
+    }
+    table tr td {
+      border: 1px solid #98aac5;
+      padding: 6px 10px;
+    }
+    table tr td:first-child {
+      font-weight: bold;
+      width: 220px;
+      background: #ffffff;
+    }
+
+    /* Footer */
+    .footer {
+      background: linear-gradient(to bottom, #5da6f5 0%, #9cccf6 100%); /* dark → light */
+      text-align: left;
+      padding: 8px 20px;
+      font-size: 12px;
+      color: #0a0a0a;
+      border-top: 1px solid #ccc;
+      width: 100%;
+      margin-top: auto; /* pushes footer to bottom */
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <a href="#">+A</a>
+      <a href="#">A</a>
+      <a href="#">-A</a>
+      <a href="#">Terms & Conditions</a> |
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Support</a> |
+      <a href="#">Login</a> |
+      <a href="#">FAQ</a> |
+      <a href="#">Help</a> |
+      <a href="#">SiteMap</a>
+    </div>
+
+    <!-- Header -->
+    <div class="header">
+      <img src="logo.jpeg" alt="Government of India Logo">
+      <h1>Ministry of Skill Development And Entrepreneurship</h1>
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbar">
+      <a href="#">Home</a>
+      <a href="#">ITI</a>
+      <a href="#">Trainee</a>
+      <a href="#">Verification</a>
+      <a href="#">Instructor</a>
+      <a href="#">Examiner</a>
+      <a href="#">Calendar</a>
+      <a href="#">CFI</a>
+      <a href="#">Help</a>
+      <a href="#">Dashboard</a>
+      <a href="#">Complaint Tool</a>
+    </div>
+
+    <!-- Certificate Verification -->
+    <h1 class="page-title">e-Certificate Verification</h1>
+    <div class="box">
+      <h2>Enter e-Certificate Number</h2>
+      <div class="box-content" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+        <div>
+          <label for="certnum">e-Certificate Number</label>
+          <input type="text" id="certnum" value="182940000442411">
+          <br><small>(Only Numbers Allowed)</small>
+        </div>
+        <div>
+          <label for="ctype">Certificate Type</label>
+          <select id="ctype">
+            <option>--select--</option>
+            <option>NCVT</option>
+            <option>Apprenticeship</option>
+          </select>
+          <button>Go</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trainee Info -->
+    <div class="box">
+      <h2>Certified Trainee Information</h2>
+      <div class="box-content">
+        <table>
+          <tr><td>Trainee Name</td><td>BHEEMASHANKAR</td></tr>
+          <tr><td>Father Name</td><td>HANAMANT</td></tr>
+          <tr><td>Institute</td><td>GR29000792-GOVT. ITI, GULBARGA</td></tr>
+          <tr><td>Institute Address</td><td>Aivan-E-Shahi Area,GULBARGA 585101</td></tr>
+          <tr><td>Trade</td><td>Electrician</td></tr>
+          <tr><td>Training Duration</td><td>Aug-2016 To Nov-2022</td></tr>
+          <tr><td>Certified</td><td>Yes</td></tr>
+          <tr><td>Certificate Issue Date</td><td>10-Mar-2023</td></tr>
+        </table>
+        <br>
+        <div style="text-align: center;">
+          <button>Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    © 2015 Ministry of Skill Development And Entrepreneurship, Government of India.  
+    <br>Suggested browser Microsoft Edge, Chrome or Safari only.
+    Total Hits : 534,324,314 | Yearly Hits : 12,452,464 | Monthly Hits : 51,683,346
+  </div>
+</body>
+</html>
